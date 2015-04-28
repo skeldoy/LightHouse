@@ -1,0 +1,12 @@
+<div class="container" ng-controller="regionHitsController">
+<table border=1px>
+<tr><th>UUID</th><th>Status</th><th>ClientIP</th><th>When</th></tr>
+<tr ng-repeat="hit in regionHits">
+ <td>{{hit.uuid}}</td>
+ <td>{{hit.status}}</td>
+ <td>{{hit.ip}}</td>
+ <td>{{hit.createdAt}}</td>
+</tr>
+</table>
+</div>
+

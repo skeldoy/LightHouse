@@ -1,0 +1,20 @@
+<div class="container" ng-controller="beaconController">
+<table>
+<tr ng-repeat="beacon in beacons">
+ <td><input ng-change="updateBeacon(beacon.id)" type="text" ng-model="beacon.uuid"/></td>
+ <td><input ng-change="updateBeacon(beacon.id)" type="text" ng-model="beacon.description"/></td>
+ <td>
+  <table>
+   <tr ng-repeat="tag in beacons.tags">
+	<td>{{tag.name}}</td>
+   </tr>
+  </table>
+ </td>
+ <td><input type="text" ng-model="newtag"/><button class="btn btn-info btn-sm" ng-click="associateTag(beacon.id)"/></td>
+</tr>
+</table>
+
+<div><button class="btn btn-info btn-sm" ng-click="insertBeacon()">Ny Beacon</button></div>
+
+</div>
+
